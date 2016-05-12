@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Chrisistheon
+{
+   public class DoorEvent : A_Event
+   { 
+      public DoorEvent()
+      {
+          this.ch = ' ';
+      }
+   
+      public override int occur()
+      {
+         return 2;
+      }
+   }
+}
