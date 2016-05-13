@@ -1,0 +1,21 @@
+﻿<Window x:Class="WpfApplication2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="635.074" Width="396.642" SizeToContent="WidthAndHeight" ResizeMode="NoResize">
+    <Grid Margin="0,0,-8,-30">
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="609" Stroke="Black" VerticalAlignment="Top" Width="397"/>
+        <TextBox x:Name="mapBox" HorizontalAlignment="Left" Height="245" TextWrapping="Wrap" VerticalAlignment="Top" Width="115" Margin="136,152,0,0" IsEnabled="False" FontFamily="SimSun" FontSize="16" TextChanged="theBox_TextChanged"/>
+        <Button x:Name="leftButton" Content="_A" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="80,522,0,0" Click="leftButton_Click"/>
+        <Button x:Name="upButton" Content="_W" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="160,511,0,0" Click="Button_Click"/>
+        <Button x:Name="rightButton" Content="_D" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="240,522,0,0" Click="rightButton_Click"/>
+        <Button x:Name="downButton" Content="_S" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="160,538,0,0" Click="downButton_Click"/>
+        <TextBox x:Name="infoBox" HorizontalAlignment="Left" Height="63" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" Margin="45,423,0,0" IsEnabled="False"/>
+        <Menu HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="387">
+            <MenuItem x:Name="gameMenu" Header="Game">
+                <MenuItem x:Name="AboutItem" Header="About" HorizontalAlignment="Left" Width="145" Click="AboutItem_Click"/>
+                <MenuItem x:Name="ExitItem" Header="Exit" HorizontalAlignment="Left" Width="145" Click="ExitItem_Click"/>
+            </MenuItem>
+        </Menu>
+
+    </Grid>
+</Window>

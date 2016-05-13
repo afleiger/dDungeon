@@ -1,0 +1,17 @@
+C:\Users\Villegard\Documents\SCHOOL\CSharp\ChrisPro\ChrisistheonProject\bin\Debug\ChrisistheonGUI.exe.config
+C:\Users\Villegard\Documents\SCHOOL\CSharp\ChrisPro\ChrisistheonProject\obj\Debug\ChrisistheonGUI.exe
+C:\Users\Villegard\Documents\SCHOOL\CSharp\ChrisPro\ChrisistheonProject\obj\Debug\ChrisistheonGUI.pdb
+C:\Users\Villegard\Documents\SCHOOL\CSharp\ChrisPro\ChrisistheonProject\bin\Debug\ChrisistheonGUI.exe
+C:\Users\Villegard\Documents\SCHOOL\CSharp\ChrisPro\ChrisistheonProject\bin\Debug\ChrisistheonGUI.pdb
+C:\Users\Villegard\Documents\SCHOOL\CSharp\ChrisPro\ChrisistheonProject\bin\Debug\ChrisistheonGUI.exe.CodeAnalysisLog.xml
+C:\Users\Villegard\Documents\SCHOOL\CSharp\ChrisPro\ChrisistheonProject\bin\Debug\ChrisistheonGUI.exe.lastcodeanalysissucceeded
+C:\Users\Villegard\Documents\SCHOOL\CSharp\ChrisPro\ChrisistheonProject\bin\Debug\Chrisistheon.dll
+C:\Users\Villegard\Documents\SCHOOL\CSharp\ChrisPro\ChrisistheonProject\bin\Debug\Chrisistheon.pdb
+C:\Users\Villegard\Documents\SCHOOL\CSharp\ChrisPro\ChrisistheonProject\obj\Debug\ChrisistheonGUI.csprojResolveAssemblyReference.cache
+C:\Users\Villegard\Documents\SCHOOL\CSharp\ChrisPro\ChrisistheonProject\obj\Debug\MainWindow.baml
+C:\Users\Villegard\Documents\SCHOOL\CSharp\ChrisPro\ChrisistheonProject\obj\Debug\MainWindow.g.cs
+C:\Users\Villegard\Documents\SCHOOL\CSharp\ChrisPro\ChrisistheonProject\obj\Debug\App.g.cs
+C:\Users\Villegard\Documents\SCHOOL\CSharp\ChrisPro\ChrisistheonProject\obj\Debug\ChrisistheonGUI_MarkupCompile.cache
+C:\Users\Villegard\Documents\SCHOOL\CSharp\ChrisPro\ChrisistheonProject\obj\Debug\ChrisistheonGUI.g.resources
+C:\Users\Villegard\Documents\SCHOOL\CSharp\ChrisPro\ChrisistheonProject\obj\Debug\ChrisistheonGUI.Properties.Resources.resources
+C:\Users\Villegard\Documents\SCHOOL\CSharp\ChrisPro\ChrisistheonProject\obj\Debug\ChrisistheonGUI.csproj.GenerateResource.Cache
