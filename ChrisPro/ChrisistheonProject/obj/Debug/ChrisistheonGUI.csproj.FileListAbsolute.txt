@@ -1,0 +1,3 @@
+C:\Users\Villegard\Documents\SCHOOL\CSharp\ChrisPro\ChrisistheonProject\bin\Debug\ChrisistheonGUI.exe.config
+C:\Users\Villegard\Documents\SCHOOL\CSharp\ChrisPro\ChrisistheonProject\obj\Debug\ChrisistheonGUI.exe
+C:\Users\Villegard\Documents\SCHOOL\CSharp\ChrisPro\ChrisistheonProject\obj\Debug\ChrisistheonGUI.pdb
