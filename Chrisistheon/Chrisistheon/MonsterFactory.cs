@@ -11,11 +11,22 @@ namespace ChrisistheonGUI
         public static List<A_Monster> randomMonsters()
         {
             List<A_Monster> ret = new List<A_Monster>();
-            ret.Add(new Skeleton());
-            ret.Add(new Skeleton());
-            ret.Add(new Imp());
-
-
+            int rand = Dungeon.gRandom.Next(1, 4);
+            switch(rand)
+            {
+                case 1:
+                    ret.Add(new Skeleton());
+                    ret.Add(new Imp());
+                    break;
+                case 2:
+                    ret.Add(new GiantSpider());
+                    ret.Add(new Skeleton());
+                    break;
+                case 3:
+                    ret.Add(new Imp());
+                    ret.Add(new GiantSpider());
+                    break;
+            }
             return ret;
         }
     }

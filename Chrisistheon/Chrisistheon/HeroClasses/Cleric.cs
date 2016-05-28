@@ -9,7 +9,7 @@ namespace ChrisistheonGUI
     public class Cleric : A_Hero
     {
         public Cleric(string name = "Pesante")
-            : base(name, 90, 3, 8, 13, 7, "Cleric", "A bringer of light and healing.", 7)
+            : base(name, 90, 2, 5, 13, 5, "Cleric", "A bringer of light and healing.", 7)
         {
             List<string> weaponList = new List<string>();
             weaponList.Add("Flanged Mace");
@@ -27,6 +27,8 @@ namespace ChrisistheonGUI
 
             AddAbility(new BasicAttack());
             AddAbility(new FlashHeal());
+            AddAbility(new SacredShield());
+            AddAbility(new UnleashHeaven());
 
         }
 
@@ -34,13 +36,26 @@ namespace ChrisistheonGUI
         {
             List<A_Entity> targs = new List<A_Entity>();
 
-            int rand = Dungeon.gRandom.Next(0, 2);
-            if (rand == 1 && heroP.LowestHealthTarget.health - heroP.LowestHealthTarget.maxHealth < -20)
+            if (heroP.LowestHealthTarget.health < 20 && heroP.RandomTarget.health < 50 && this.spellSlots >= AbilityList[3].slotsRequired) // Unleash Heaven
+            {
+                foreach (A_Entity cur in heroP.mList)
+                {
+                    targs.Add(cur);
+                }
+                return AbilityList[3].use(this, targs);
+            }
+
+            int rand = Dungeon.gRandom.Next(1, 101);
+            if (rand < 50 && heroP.LowestHealthTarget.health - heroP.LowestHealthTarget.maxHealth < -20) //Flash Heal
             {
                 targs.Add(heroP.LowestHealthTarget);
                 return AbilityList[1].use(this, targs);
             }
-
+            if(rand < 75) //Sacred Shield
+            {
+                targs.Add(heroP.LowestHealthTarget);
+                return AbilityList[2].use(this, targs);
+            }
             targs.Add(monsterP.RandomTarget);
             return AbilityList[0].use(this, targs);
         }

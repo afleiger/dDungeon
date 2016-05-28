@@ -8,10 +8,10 @@ namespace ChrisistheonGUI
 {
     public class RoomFactory
     {
-        private static int monsterRate = 100;
+        private static int monsterRate = 70;
         private static int chestRate = 5;
-        private static int shrineRate = 4;
-        private static int miscRate = 4;
+        private static int shrineRate = 5;
+        private static int miscRate = 5;
         //remaining chance out of 1000 will result in no special tile at the spawn.
 
         public static string randomRoomString()

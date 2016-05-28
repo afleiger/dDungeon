@@ -32,7 +32,7 @@ namespace ChrisistheonGUI
 
             dam = (self.power + self.ModifyDie) * (1 - targets[0].DamageReduction) *.9;
             targets[0].Damage(dam);
-            return "\n-HIT-" + self.charString + " scewers " + targets[0].charString + " with its trident, dealing " + ((int)dam) + " damage.";
+            return "\n-HIT-" + self.charString + " skewers " + targets[0].charString + " with its trident, dealing " + ((int)dam) + " damage.";
         }
     }
 }

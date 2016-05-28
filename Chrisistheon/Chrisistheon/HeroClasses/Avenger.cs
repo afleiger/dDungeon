@@ -27,17 +27,31 @@ namespace ChrisistheonGUI
 
             AddAbility(new BasicAttack());
             AddAbility(new HolyStrike());
+            AddAbility(new BladeDance());
+            AddAbility(new DivineGrace());
         }
 
         public override string TakeTurn(Party heroP, MonsterParty monsterP)
         {
             List<A_Entity> targs = new List<A_Entity>();
 
-            int rand = Dungeon.gRandom.Next(0, 2);
-            if (rand == 1 && AbilityList[1].slotsRequired <= this.spellSlots && this.health < this.maxHealth)
+            int rand = Dungeon.gRandom.Next(1, 101);
+            if (rand < 40 &&  this.health < this.maxHealth)//HolyStrike
             {
                 targs.Add(monsterP.RandomTarget);
                 return AbilityList[1].use(this, targs);
+            }
+            if(rand < 50 && this.spellSlots >= AbilityList[2].slotsRequired)//Blade Dance
+            {
+                targs.Add(monsterP.RandomTarget);
+                targs.Add(monsterP.RandomTarget);
+                targs.Add(monsterP.RandomTarget);
+                targs.Add(monsterP.RandomTarget);
+                return AbilityList[2].use(this, targs);
+            }
+            if(rand < 60 && this.speed != (this.maxSpeed *2))// Divine Grace
+            {
+                return AbilityList[3].use(this, targs);
             }
 
             targs.Add(monsterP.RandomTarget);

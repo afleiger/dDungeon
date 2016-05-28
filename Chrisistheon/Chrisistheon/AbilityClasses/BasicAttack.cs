@@ -22,7 +22,7 @@ namespace ChrisistheonGUI
             double dam;
             if(attackRoll > toHit)
             {
-                return "\n-MISS-" + self.charString + " swings their weapon at " + targets[0].charString + " but misses.";
+                return "\n-MISS-" + self.charString + " swings their " + ((A_Hero)self).currentWeapon + " at " + targets[0].charString + " but misses.";
             }
             if(attackRoll <= 5)
             {
