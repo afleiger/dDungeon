@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{935D8B33-BADD-4769-B387-B330FAF8104D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ChrisistheonGUI</RootNamespace>
+    <AssemblyName>Chrisistheon</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbilityClasses\BackStab.cs" />
+    <Compile Include="AbilityClasses\BasicAttack.cs" />
+    <Compile Include="AbilityClasses\ClawAttack.cs" />
+    <Compile Include="AbilityClasses\DoubleShot.cs" />
+    <Compile Include="AbilityClasses\EnchantWeapon.cs" />
+    <Compile Include="AbilityClasses\FlameStrike.cs" />
+    <Compile Include="AbilityClasses\FlashHeal.cs" />
+    <Compile Include="AbilityClasses\FlurryOfArrows.cs" />
+    <Compile Include="AbilityClasses\Harden.cs" />
+    <Compile Include="AbilityClasses\Hide.cs" />
+    <Compile Include="AbilityClasses\HolyStrike.cs" />
+    <Compile Include="AbilityClasses\LayOnHands.cs" />
+    <Compile Include="AbilityClasses\Seppuku.cs" />
+    <Compile Include="AbilityClasses\SureShot.cs" />
+    <Compile Include="AbilityClasses\TridentPoke.cs" />
+    <Compile Include="A_Ability.cs" />
+    <Compile Include="HeroClasses\Archer.cs" />
+    <Compile Include="HeroClasses\Avenger.cs" />
+    <Compile Include="A_Entity.cs" />
+    <Compile Include="A_Event.cs" />
+    <Compile Include="A_Hero.cs" />
+    <Compile Include="A_Monster.cs" />
+    <Compile Include="HeroClasses\Cleric.cs" />
+    <Compile Include="HeroClasses\Paladin.cs" />
+    <Compile Include="HeroClasses\Samurai.cs" />
+    <Compile Include="MonsterClasses\Imp.cs" />
+    <Compile Include="MonsterClasses\Skeleton.cs" />
+    <Compile Include="MonsterFactory.cs" />
+    <Compile Include="MonsterParty.cs" />
+    <Compile Include="TileClasses\ChestTile.cs" />
+    <Compile Include="Chrisistheon.cs" />
+    <Compile Include="TileClasses\DoorTile.cs" />
+    <Compile Include="Dungeon.cs" />
+    <Compile Include="TileClasses\EmptyTile.cs" />
+    <Compile Include="HeroClasses\Enchanter.cs" />
+    <Compile Include="HeroClasses\Warlock.cs" />
+    <Compile Include="HeroFactory.cs" />
+    <Compile Include="HeroClasses\Mage.cs" />
+    <Compile Include="TileClasses\MiscTile.cs" />
+    <Compile Include="TileClasses\MonsterTile.cs" />
+    <Compile Include="Party.cs" />
+    <Compile Include="TileClasses\PlayerTile.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Room.cs" />
+    <Compile Include="RoomFactory.cs" />
+    <Compile Include="TileClasses\ShrineTile.cs" />
+    <Compile Include="A_Tile.cs" />
+    <Compile Include="HeroClasses\Thief.cs" />
+    <Compile Include="TileClasses\StairTile.cs" />
+    <Compile Include="TileClasses\WallTile.cs" />
+    <Compile Include="HeroClasses\Warrior.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
