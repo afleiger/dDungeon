@@ -31,20 +31,6 @@ namespace ChrisistheonGUI
 
         }
 
-        public new void Damage(double dmg)
-        {
-            this.health -= dmg;
-            if (this.health <= 0)
-            {
-                Random rand = new Random();
-                int rng = rand.Next(0, 101);
-                if (rng < 90)
-                    this.health = this.maxHealth;
-                else
-                    this.health = 0;
-            }
-        }
-
         public override string TakeTurn(Party heroP, MonsterParty monsterP)
         {
             List<A_Entity> targs = new List<A_Entity>();
