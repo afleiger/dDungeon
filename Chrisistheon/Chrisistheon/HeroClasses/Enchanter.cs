@@ -27,17 +27,29 @@ namespace ChrisistheonGUI
 
             AddAbility(new BasicAttack());
             AddAbility(new EnchantWeapon());
+            AddAbility(new EnchantArmor());
+            AddAbility(new PerfectEnchantment());
 
         }
 
         public override string TakeTurn(Party heroP, MonsterParty monsterP)
         {
             List<A_Entity> targs = new List<A_Entity>();
-            int rand = Dungeon.gRandom.Next(0, 2);
-            if(rand == 0)
+            int rand = Dungeon.gRandom.Next(1, 101);
+            if(rand <= 35)//Enchant Weapon
             {
                 targs.Add(heroP.RandomTarget);
                 return AbilityList[1].use(this, targs);
+            }
+            if(rand <= 70)//Enchant Armor
+            {
+                targs.Add(heroP.RandomTarget);
+                return AbilityList[2].use(this, targs);
+            }
+            if (rand <= 80 && AbilityList[3].slotsRequired <= this.spellSlots)//Perfect Enchantment
+            {
+                targs.Add(heroP.RandomTarget);
+                return AbilityList[3].use(this, targs);
             }
 
             targs.Add(monsterP.RandomTarget);

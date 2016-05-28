@@ -48,8 +48,8 @@ namespace ChrisistheonGUI
                 return AbilityList[2].use(this, targs);
             }
             //LayOnHands
-            if (rand < 46 && AbilityList[1].slotsRequired <= this.spellSlots &&
-                heroP.LowestHealthTarget.health - heroP.LowestHealthTarget.maxHealth < -40)
+            if (rand < 46 && AbilityList[3].slotsRequired <= this.spellSlots &&
+                heroP.LowestHealthTarget.health - heroP.LowestHealthTarget.maxHealth < -60)
             {
                 targs.Add(heroP.LowestHealthTarget);
                 return AbilityList[3].use(this, targs);

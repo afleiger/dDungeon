@@ -90,6 +90,10 @@ namespace ChrisistheonGUI
             get { return pow; }
             set { pow = value;
             currentPow = value;
+                if(pow < 0)
+                {
+                    maxPower = 0;
+                }
             }
         }
 

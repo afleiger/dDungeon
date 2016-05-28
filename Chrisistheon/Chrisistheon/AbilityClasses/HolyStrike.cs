@@ -9,7 +9,7 @@ namespace ChrisistheonGUI
     public class HolyStrike : A_Ability
     {
         public HolyStrike()
-            : base("Holy Strike", "A blessed strike which heals the user if successful. Uses 1 Spell Slot.", 1, 1)
+            : base("Holy Strike", "A blessed strike which heals the user if successful.", 0, 1)
         {
 
         }
@@ -22,14 +22,14 @@ namespace ChrisistheonGUI
             int toHit = 90 + (int)(self.speed - targets[0].speed);
             if (attackRoll > toHit)
             {
-                return "\n-MISS-" + self.charString + " swings their weapon at " + targets[0].charString + " but misses horribly.";
+                return "\n-MISS-" + self.charString + " uses Holy Strike on " + targets[0].charString + " but misses horribly.";
             }
 
-            double dam = (self.power + self.ModifyDie) * (1 - targets[0].DamageReduction) * 1.3;
+            double dam = (self.power + self.ModifyDie) * (1 - targets[0].DamageReduction) * .8;
             targets[0].Damage(dam);
-            double heal = dam * .85;
+            double heal = dam * .25;
             self.Heal(heal);
-            return "\n-HIT-" + self.charString + " concecrates their " + ((A_Hero)self).currentWeapon+ " before assaulting the " + targets[0].charString + " dealing " + ((int)dam) + " damage." + "\n-" + self.charString + " heals for " + ((int)heal);
+            return "\n-HIT-" + self.charString + " uses Holy Strike on " + targets[0].charString + " dealing " + ((int)dam) + " damage." + "\n-" + self.charString + " heals for " + ((int)heal);
         }
     }
 }

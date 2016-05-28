@@ -17,7 +17,7 @@ namespace ChrisistheonGUI
         public override string use(A_Entity self, List<A_Entity> targets)
         {
             ((A_Hero)self).spellSlots -= this.slotsRequired;
-            string hits="";
+            string hits="\n-" + self.charString + "uses Double Shot.";
 
             
 
@@ -27,36 +27,41 @@ namespace ChrisistheonGUI
             double dam;
             if (attackRoll > toHit)
             {
-                hits+= "\n-MISS-" + self.charString + " swings their weapon at " + targets[0].charString + " but misses.";
+                hits+= "\n-MISS-" + self.charString + " fires at " + targets[0].charString + " but misses.";
             }
-            if (attackRoll <= 5)
+            else if (attackRoll <= 5)
             {
                 dam = ((self.power*.8) + self.ModifyDie) * (1 - targets[0].DamageReduction) * 1.5;
                 targets[0].Damage(dam);
-                hits+= "\n-CRITICAL-" + self.charString + " delivers a critical strike, crushing the " + targets[0].charString + ". Dealing " + ((int)dam) + " damage.";
+                hits+= "\n-CRITICAL-" + self.charString + " delivers a critical arrow, puncturing " + targets[0].charString + ". Dealing " + ((int)dam) + " damage.";
             }
-
-            dam = ((self.power * .8) + self.ModifyDie) * (1 - targets[0].DamageReduction);
-            targets[0].Damage(dam);
-            hits += "\n-HIT-" + self.charString + " strikes the " + targets[0].charString + " and deals " + ((int)dam) + " damage.";
+            else
+            {
+                dam = ((self.power * .8) + self.ModifyDie) * (1 - targets[0].DamageReduction);
+                targets[0].Damage(dam);
+                hits += "\n-HIT-" + self.charString + " shoots " + targets[0].charString + " and deals " + ((int)dam) + " damage.";
+            }
+            
 
             attackRoll = Dungeon.gRandom.Next(1, 101);
-            toHit = 90 + (int)(self.speed - targets[0].speed);
+            toHit = 90 + (int)(self.speed - targets[1].speed);
             
             if (attackRoll > toHit)
             {
-                hits += "\n-MISS-" + self.charString + " swings their weapon at " + targets[1].charString + " but misses.";
+                hits += "\n-MISS-" + self.charString + " fires at " + targets[1].charString + " but misses.";
             }
-            if (attackRoll <= 5)
+            else if (attackRoll <= 5)
             {
                 dam = ((self.power * .8) + self.ModifyDie) * (1 - targets[1].DamageReduction) * 1.5;
-                targets[0].Damage(dam);
-                hits += "\n-CRITICAL-" + self.charString + " delivers a critical strike, crushing the " + targets[1].charString + ". Dealing " + ((int)dam) + " damage.";
+                targets[1].Damage(dam);
+                hits += "\n-CRITICAL-" + self.charString + " delivers a critical arrow, puncturing " + targets[1].charString + ". Dealing " + ((int)dam) + " damage.";
             }
-
-            dam = ((self.power * .8) + self.ModifyDie) * (1 - targets[1].DamageReduction);
-            targets[0].Damage(dam);
-            hits += "\n-HIT-" + self.charString + " strikes the " + targets[1].charString + " and deals " + ((int)dam) + " damage.";
+            else
+            {
+                dam = ((self.power * .8) + self.ModifyDie) * (1 - targets[1].DamageReduction);
+                targets[1].Damage(dam);
+                hits += "\n-HIT-" + self.charString + " shoots " + targets[1].charString + " and deals " + ((int)dam) + " damage.";
+            }
 
             return hits;
         }

@@ -44,8 +44,12 @@
   <ItemGroup>
     <Compile Include="AbilityClasses\BackStab.cs" />
     <Compile Include="AbilityClasses\BasicAttack.cs" />
+    <Compile Include="AbilityClasses\BiteAttack.cs" />
+    <Compile Include="AbilityClasses\BladeDance.cs" />
     <Compile Include="AbilityClasses\ClawAttack.cs" />
+    <Compile Include="AbilityClasses\DivineGrace.cs" />
     <Compile Include="AbilityClasses\DoubleShot.cs" />
+    <Compile Include="AbilityClasses\EnchantArmor.cs" />
     <Compile Include="AbilityClasses\EnchantWeapon.cs" />
     <Compile Include="AbilityClasses\FlameStrike.cs" />
     <Compile Include="AbilityClasses\FlashHeal.cs" />
@@ -53,10 +57,16 @@
     <Compile Include="AbilityClasses\Harden.cs" />
     <Compile Include="AbilityClasses\Hide.cs" />
     <Compile Include="AbilityClasses\HolyStrike.cs" />
+    <Compile Include="AbilityClasses\IcicleShield.cs" />
     <Compile Include="AbilityClasses\LayOnHands.cs" />
+    <Compile Include="AbilityClasses\LightningStrike.cs" />
+    <Compile Include="AbilityClasses\PerfectEnchantment.cs" />
+    <Compile Include="AbilityClasses\SacredShield.cs" />
     <Compile Include="AbilityClasses\Seppuku.cs" />
     <Compile Include="AbilityClasses\SureShot.cs" />
     <Compile Include="AbilityClasses\TridentPoke.cs" />
+    <Compile Include="AbilityClasses\UnleashHeaven.cs" />
+    <Compile Include="AbilityClasses\WebShot.cs" />
     <Compile Include="A_Ability.cs" />
     <Compile Include="HeroClasses\Archer.cs" />
     <Compile Include="HeroClasses\Avenger.cs" />
@@ -67,6 +77,7 @@
     <Compile Include="HeroClasses\Cleric.cs" />
     <Compile Include="HeroClasses\Paladin.cs" />
     <Compile Include="HeroClasses\Samurai.cs" />
+    <Compile Include="MonsterClasses\GiantSpider.cs" />
     <Compile Include="MonsterClasses\Imp.cs" />
     <Compile Include="MonsterClasses\Skeleton.cs" />
     <Compile Include="MonsterFactory.cs" />

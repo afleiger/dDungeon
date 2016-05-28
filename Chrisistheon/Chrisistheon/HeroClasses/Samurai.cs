@@ -9,11 +9,11 @@ namespace ChrisistheonGUI
     public class Samurai : A_Hero
     {
         public Samurai(string name = "Nobunaga")
-            : base(name, 90, 1, 25, 0, 9, "Samurai", "A fragile, yet devasting swordsman of superior skill.", 8)
+            : base(name, 85, 1, 25, 0, 9, "Samurai", "A fragile, yet devasting swordsman of superior skill.", 8)
         {
             List<string> weaponList = new List<string>();
             weaponList.Add("Steel Katana");
-            weaponList.Add("Maramasa*");
+            weaponList.Add("Muramasa*");
             weaponList.Add("Chaos Blade**");
 
             this.weapons = weaponList;
