@@ -1,0 +1,57 @@
+﻿<Window x:Name="MainWindow1" x:Class="ChrisistheonGUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Chrisistheon" Height="618.074" Width="627.642" SizeToContent="WidthAndHeight" ResizeMode="NoResize" Icon="Images/Capture.ico">
+    <Grid Margin="0,0,-6,-19" Height="608" VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="mapBox" HorizontalAlignment="Left" Height="245" TextWrapping="Wrap" VerticalAlignment="Top" Width="115" Margin="120,85,0,0" IsEnabled="False" FontFamily="SimSun" FontSize="16" TextChanged="theBox_TextChanged"/>
+        <Button x:Name="leftButton" Content="_A" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="60,456,0,0" Click="leftButton_Click" Height="20"/>
+        <Button x:Name="upButton" Content="_W" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="140,445,0,0" Click="Button_Click" Height="20"/>
+        <Button x:Name="rightButton" Content="_D" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="220,456,0,0" Click="rightButton_Click" Height="20"/>
+        <Button x:Name="downButton" Content="_S" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="140,472,0,0" Click="downButton_Click" Height="20"/>
+        <TextBox x:Name="infoBox" HorizontalAlignment="Left" Height="63" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" Margin="28,354,0,0" IsEnabled="False" Text="Your party enters the foreboding tower..."/>
+        <Menu Height="26" VerticalAlignment="Top" Margin="2,0,10,0">
+            <MenuItem x:Name="gameMenu" Header="Game">
+                <MenuItem x:Name="AboutItem" Header="About" HorizontalAlignment="Left" Width="145" Click="AboutItem_Click"/>
+                <MenuItem x:Name="ExitItem" Header="Exit" HorizontalAlignment="Left" Width="145" Click="ExitItem_Click"/>
+            </MenuItem>
+        </Menu>
+        <GroupBox x:Name="player1Box" Header="" Margin="357,36,0,0" HorizontalAlignment="Left" Width="247" FontWeight="Bold" Height="100" VerticalAlignment="Top">
+            <Grid Margin="0,0,-2,-12">
+                <ProgressBar x:Name="barCharacter1" Height="24" VerticalAlignment="Top" Margin="57,10,0,0" Background="#FFE00D0D" HorizontalAlignment="Left" Width="170"/>
+                <Label x:Name="P1HealthLabel" Content="Health:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="7,10,0,0" Height="27" FontWeight="Normal"/>
+                <Label x:Name="player1Slots" Content="Spell Slots:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="7,42,0,0" Width="119" FontWeight="Normal"/>
+                <Label x:Name="player1HealthNums" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="116,10,0,0"/>
+                <Button x:Name="playerStats1" Content="Stats" HorizontalAlignment="Left" Margin="152,45,0,0" VerticalAlignment="Top" Width="75" Click="playerStats1_Click"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="player3Box" Header="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="357,245,0,0" Height="100" Width="247" FontWeight="Bold">
+            <Grid Margin="0,0,-2,-12">
+                <ProgressBar x:Name="barCharacter3" HorizontalAlignment="Left" Height="27" VerticalAlignment="Top" Width="170" Margin="57,10,0,0" Background="#FFE00D0D"/>
+                <Label x:Name="P1HealthLabel_Copy1" Content="Health:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="7,10,0,0" Height="27" FontWeight="Normal"/>
+                <Label x:Name="player3Slots" Content="Spell Slots:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="7,42,0,0" Width="119" FontWeight="Normal"/>
+                <Label x:Name="player3HealthNums" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="116,10,0,0"/>
+                <Button x:Name="playerStats3" Content="Stats" HorizontalAlignment="Left" Margin="152,45,0,0" VerticalAlignment="Top" Width="75" Click="playerStats3_Click"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="player2Box" Header="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="357,141,0,0" Height="99" Width="247" FontWeight="Bold">
+            <Grid Margin="0,0,-2,-12">
+                <ProgressBar x:Name="barCharacter2" HorizontalAlignment="Left" Height="27" VerticalAlignment="Top" Width="170" Margin="57,10,0,0" Background="#FFE00D0D"/>
+                <Label x:Name="P1HealthLabel_Copy" Content="Health:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="7,10,0,0" Height="27" FontWeight="Normal"/>
+                <Label x:Name="player2Slots" Content="Spell Slots:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="7,42,0,0" Width="119" FontWeight="Normal"/>
+                <Label x:Name="player2HealthNums" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="116,10,0,0"/>
+                <Button x:Name="playerStats2" Content="Stats" HorizontalAlignment="Left" Margin="152,45,0,0" VerticalAlignment="Top" Width="75" Click="playerStats2_Click"/>
+            </Grid>
+        </GroupBox>
+        <Image HorizontalAlignment="Left" Height="174" VerticalAlignment="Top" Width="247" Margin="432,372,-51,0" Source="Images/tower.ico" Grid.ColumnSpan="2"/>
+        <Button x:Name="restButton" Content="Rest: " HorizontalAlignment="Left" VerticalAlignment="Top" Width="112" Margin="60,523,0,0" Height="28" Click="restButton_Click"/>
+
+    </Grid>
+</Window>

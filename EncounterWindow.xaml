@@ -1,0 +1,13 @@
+﻿<Window x:Class="ChrisistheonGUI.EncounterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Encounter" Height="343" Width="312" Icon="Images/Capture.ico" ResizeMode="NoResize">
+    <Grid>
+        <Grid>
+            <TextBlock x:Name="encBlock" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="10,190,0,0" Height="65" Width="284" IsEnabled="False"/>
+            <Button x:Name="okButton" Content="OK_ " HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="114,260,0,0" Click="okButton_Click"/>
+            <Image x:Name="encPicture" Margin="64,10,67,129" Source="Images/chest.ico"/>
+        </Grid>
+
+    </Grid>
+</Window>
