@@ -28,7 +28,7 @@ namespace ChrisistheonGUI
                 return "\n-MISS-" + self.charString + " attempts to cast Lightning Strike, but it failed.";
             }
 
-            while(attackRoll < 60)
+            while(attackRoll < 66)
             {
                 strikeCount ++;
                 dam += (self.power + self.ModifyDie) * (1 - targets[0].DamageReduction) + 5;

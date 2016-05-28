@@ -22,7 +22,7 @@ namespace ChrisistheonGUI
             int toHit;
             int hitCounter=0;
             double dam=0;
-            for(int i=0; i<7; i++)
+            for(int i=0; i<8; i++)
             {
                 attackRoll = Dungeon.gRandom.Next(1, 101);
                 toHit = 40 + (int)(self.speed - targets[0].speed);

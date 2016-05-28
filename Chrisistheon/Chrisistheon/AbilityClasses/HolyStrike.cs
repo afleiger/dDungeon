@@ -25,7 +25,7 @@ namespace ChrisistheonGUI
                 return "\n-MISS-" + self.charString + " uses Holy Strike on " + targets[0].charString + " but misses horribly.";
             }
 
-            double dam = (self.power + self.ModifyDie) * (1 - targets[0].DamageReduction) * .8;
+            double dam = (self.power + self.ModifyDie) * (1 - targets[0].DamageReduction) * .85;
             targets[0].Damage(dam);
             double heal = dam * .25;
             self.Heal(heal);

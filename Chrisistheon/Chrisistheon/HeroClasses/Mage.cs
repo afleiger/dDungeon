@@ -50,17 +50,18 @@ namespace ChrisistheonGUI
                 targs.Add(monsterP.RandomTarget);
                 return AbilityList[2].use(this, targs);
             }
-            if(rand < 75)//Icicle Shield
+            if(rand < 75)//Basic
             {
-                foreach (A_Entity cur in heroP.mList)
-                {
-                    targs.Add(cur);
-                }
-                return AbilityList[3].use(this, targs);
+                targs.Add(monsterP.RandomTarget);
+                return AbilityList[0].use(this, targs);
             }
 
-            targs.Add(monsterP.RandomTarget);
-            return AbilityList[0].use(this, targs);
+            foreach (A_Entity cur in heroP.mList) //Icicle
+            {
+                targs.Add(cur);
+            }
+            return AbilityList[3].use(this, targs);
+
         }
     }
 }

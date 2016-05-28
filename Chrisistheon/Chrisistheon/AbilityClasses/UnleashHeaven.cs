@@ -26,7 +26,7 @@ namespace ChrisistheonGUI
                 return "\n-FAIL-" + self.charString + " fails to Unleash Heaven. GG.";
             }
 
-            double heal = (self.power + self.ModifyDie) * 3.5;
+            double heal = (self.power + self.ModifyDie + 2) * 3.5;
             foreach (A_Entity tar in targets)
             {
                 tar.Heal(heal);

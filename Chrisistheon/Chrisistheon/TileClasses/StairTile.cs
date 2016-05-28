@@ -15,7 +15,7 @@ namespace ChrisistheonGUI
 
         public override int occur()
         {
-            Dungeon._infoString = "You Defeated the Boss... You Win!";
+            Dungeon._encounterString = "boss";
             return 3;
         }
     }

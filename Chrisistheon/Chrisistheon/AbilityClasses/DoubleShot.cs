@@ -17,7 +17,7 @@ namespace ChrisistheonGUI
         public override string use(A_Entity self, List<A_Entity> targets)
         {
             ((A_Hero)self).spellSlots -= this.slotsRequired;
-            string hits="\n-" + self.charString + "uses Double Shot.";
+            string hits="\n-" + self.charString + " uses Double Shot.";
 
             
 

@@ -36,7 +36,7 @@ namespace ChrisistheonGUI
         {
             List<A_Entity> targs = new List<A_Entity>();
 
-            if (heroP.LowestHealthTarget.health < 20 && heroP.RandomTarget.health < 50 && this.spellSlots >= AbilityList[3].slotsRequired) // Unleash Heaven
+            if (heroP.LowestHealthTarget.health < 20 && this.spellSlots >= AbilityList[3].slotsRequired) // Unleash Heaven
             {
                 foreach (A_Entity cur in heroP.mList)
                 {

@@ -42,11 +42,13 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbilityClasses\Awaken.cs" />
     <Compile Include="AbilityClasses\BackStab.cs" />
     <Compile Include="AbilityClasses\BasicAttack.cs" />
     <Compile Include="AbilityClasses\BiteAttack.cs" />
     <Compile Include="AbilityClasses\BladeDance.cs" />
     <Compile Include="AbilityClasses\ClawAttack.cs" />
+    <Compile Include="AbilityClasses\DemonRage.cs" />
     <Compile Include="AbilityClasses\DivineGrace.cs" />
     <Compile Include="AbilityClasses\DoubleShot.cs" />
     <Compile Include="AbilityClasses\EnchantArmor.cs" />
@@ -68,6 +70,7 @@
     <Compile Include="AbilityClasses\UnleashHeaven.cs" />
     <Compile Include="AbilityClasses\WebShot.cs" />
     <Compile Include="A_Ability.cs" />
+    <Compile Include="BossClasses\DemonLord.cs" />
     <Compile Include="HeroClasses\Archer.cs" />
     <Compile Include="HeroClasses\Avenger.cs" />
     <Compile Include="A_Entity.cs" />

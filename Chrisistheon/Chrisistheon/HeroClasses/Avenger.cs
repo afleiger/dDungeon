@@ -41,7 +41,7 @@ namespace ChrisistheonGUI
                 targs.Add(monsterP.RandomTarget);
                 return AbilityList[1].use(this, targs);
             }
-            if(rand < 50 && this.spellSlots >= AbilityList[2].slotsRequired)//Blade Dance
+            if(rand < 50 && rand > 39 && this.spellSlots >= AbilityList[2].slotsRequired)//Blade Dance
             {
                 targs.Add(monsterP.RandomTarget);
                 targs.Add(monsterP.RandomTarget);
@@ -49,7 +49,7 @@ namespace ChrisistheonGUI
                 targs.Add(monsterP.RandomTarget);
                 return AbilityList[2].use(this, targs);
             }
-            if(rand < 60 && this.speed != (this.maxSpeed *2))// Divine Grace
+            if(rand < 60 &&  rand > 49 &&this.speed != (this.maxSpeed *2))// Divine Grace
             {
                 return AbilityList[3].use(this, targs);
             }

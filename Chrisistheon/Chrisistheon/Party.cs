@@ -9,7 +9,6 @@ namespace ChrisistheonGUI
 {
     public class Party
     {
-        private A_Hero playerCharacter;
         private List<A_Hero> members;
         private int potionCount;
         
@@ -21,7 +20,7 @@ namespace ChrisistheonGUI
 
         public string playerName
         {
-            get { return playerCharacter.charString; }
+            get { return members[0].charString; }
         }
 
         public A_Hero RandomTarget
@@ -32,19 +31,15 @@ namespace ChrisistheonGUI
                 int x = 0;
                 while(x < 10)
                 {
-                    r = Dungeon.gRandom.Next(0, members.Count + 1);
-                    if (r == members.Count)
-                    {
-                        if(playerCharacter.Status != "Stealthing")
-                            return playerCharacter;
-                    }
-                    else if(members[r].Status != "Stealthing")
+                    r = Dungeon.gRandom.Next(0, members.Count);
+
+                    if(members[r].Status != "Stealthing")
                     {
                         return members[r];
                     }
                     x++;
                 }
-                return playerCharacter;
+                return members[r];
             }
         }
 
@@ -71,57 +66,57 @@ namespace ChrisistheonGUI
 
         public A_Hero player1
         {
-            get { return playerCharacter; }
+            get { return members[0]; }
         }
 
         public A_Hero player2
         {
-            get { return members[0]; }
+            get { return members[1]; }
         }
 
         public A_Hero player3
         {
-            get { return members[1]; }
+            get { return members[2]; }
         }
 
         public string playerClass
         {
-            get { return playerCharacter.classString; }
+            get { return members[0].classString; }
         }
 
         public string member1Name
         {
-            get { return (members[0]).charString; }
+            get { return (members[1]).charString; }
         }
 
         public string member2Name
         {
-            get { return (members[1]).charString; }
+            get { return (members[2]).charString; }
         }
 
         public string member1Class
         {
-            get { return (members[0]).classString; }
+            get { return (members[1]).classString; }
         }
 
         public string member2Class
         {
-            get { return (members[1]).classString; }
+            get { return (members[2]).classString; }
         }
 
         public double playerHealthPercent
         {
-            get { return (playerCharacter.health / playerCharacter.maxHealth) * 100; }
+            get { return (members[0].health / members[0].maxHealth) * 100; }
         }
 
         public double member1HealthPercent
         {
-            get { return 100 * (members[0]).health / (members[0]).maxHealth; }
+            get { return 100 * (members[1]).health / (members[1]).maxHealth; }
         }
 
         public double member2HealthPercent
         {
-            get { return 100 * (members[1]).health / (members[1]).maxHealth; }
+            get { return 100 * (members[2]).health / (members[2]).maxHealth; }
         }
 
         public void restorePartyMembers()
@@ -140,11 +135,6 @@ namespace ChrisistheonGUI
         public void addMember(A_Hero member)
         {
             members.Add(member);
-        }
-
-        public void addPlayer(A_Hero member)
-        {
-            playerCharacter = member;
         }
 
         public void setStatsToDefault()

@@ -22,18 +22,18 @@ namespace ChrisistheonGUI
             double dam;
             if(attackRoll > toHit)
             {
-                return "\n-MISS-" + self.charString + " swings their " + ((A_Hero)self).currentWeapon + " at " + targets[0].charString + " but misses.";
+                return "\n-MISS-" + self.charString + " attacks " + targets[0].charString + " but misses.";
             }
             if(attackRoll <= 5)
             {
                 dam = (self.power + self.ModifyDie) * (1 - targets[0].DamageReduction) * 1.5;
                 targets[0].Damage(dam);
-                return "\n-CRITICAL-" + self.charString + " delivers a critical strike, crushing the " + targets[0].charString + ". Dealing " + ((int)dam) + " damage.";
+                return "\n-CRITICAL-" + self.charString + " delivers a critical strike, crushing " + targets[0].charString + ". Dealing " + ((int)dam) + " damage.";
             }
 
             dam = (self.power + self.ModifyDie) * (1 - targets[0].DamageReduction);
             targets[0].Damage(dam);
-            return "\n-HIT-" + self.charString + " strikes the " + targets[0].charString + " and deals "+ ((int)dam) + " damage.";
+            return "\n-HIT-" + self.charString + " attacks " + targets[0].charString + " and deals "+ ((int)dam) + " damage.";
         }
     }
 }

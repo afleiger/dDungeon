@@ -26,7 +26,21 @@ namespace ChrisistheonGUI
                     ret.Add(new Imp());
                     ret.Add(new GiantSpider());
                     break;
+                case 4:
+                    ret.Add(new Skeleton());
+                    ret.Add(new GiantSpider());
+                    ret.Add(new Imp());
+                    break;
             }
+            return ret;
+        }
+
+        public static List<A_Monster> randomBoss()
+        {
+            List<A_Monster> ret = new List<A_Monster>();
+
+            ret.Add(new DemonLord());
+
             return ret;
         }
     }
